@@ -1,0 +1,39 @@
+activation: tanh
+batch_size: 256
+inference_batch_size: 256
+dataset: Custom
+coord_files: "data/training_data/chignolin_ca_coords.npy"
+embed_files: "data/training_data/chignolin_ca_embeddings.npy"
+force_files: "data/training_data/chignolin_ca_deltaforces.npy"
+cutoff_upper: 12.0
+cutoff_lower: 3.0
+derivative: true
+#distributed_backend: ddp
+early_stopping_patience: 30
+embedding_dimension: 128
+dataset_arg:
+  label:
+  - forces
+lr: 0.0005
+lr_factor: 0.8
+lr_min: 1.0e-06
+lr_patience: 10
+lr_warmup_steps: 0
+model: graph-network
+neighbor_embedding: false
+ngpus: 0
+num_epochs: 200
+num_layers: 4
+num_nodes: 1
+num_rbf: 18
+num_workers: 8
+rbf_type: expnorm
+save_interval: 2
+seed: 94572
+#test_interval: 2
+test_size: null
+train_size: 0.9
+trainable_rbf: true
+val_size: 0.05
+weight_decay: 0.0
+

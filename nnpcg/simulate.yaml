@@ -1,0 +1,25 @@
+forcefield: data/training_data/forcefield_priors.yaml
+forceterms:
+- Bonds
+- RepulsionCG
+- Dihedrals
+exclusions: ('bonds')
+langevin_gamma: 1
+langevin_temperature: 350
+log_dir: data/simulation
+output: output
+output_period: 100
+precision: double
+replicas: 32
+rfa: false
+save_period: 1000
+seed: 1
+steps: 5000000
+topology: data/training_data/chignolin_ca_top.psf
+coordinates: data/simulation/chignolin.xtc
+temperature: 350
+timestep: 1
+external:
+  module: torchmdnet.calculators
+  embeddings: [4, 4, 5, 8, 6, 13, 2, 13, 7, 4]
+  file: data/train_light/model.ckpt

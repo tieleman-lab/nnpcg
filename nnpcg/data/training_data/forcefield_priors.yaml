@@ -1,0 +1,78 @@
+atomtypes:
+- CAY
+- CAG
+- CAW
+- CAD
+- CAT
+- CAE
+- CAP
+bonds:
+  (CAD, CAP):
+    k0: 81.12476517572172
+    req: 3.8754037745831575
+  (CAE, CAT):
+    k0: 81.34039514361409
+    req: 3.8395342076225383
+  (CAP, CAE):
+    k0: 77.91642370090479
+    req: 3.8356831501612816
+  (CAT, CAG):
+    k0: 81.08261646338956
+    req: 3.8267507646564973
+  (CAT, CAW):
+    k0: 81.08186173068123
+    req: 3.8239994500137335
+  (CAW, CAY):
+    k0: 86.1410053783837
+    req: 3.831056396499763
+  (CAY, CAD):
+    k0: 86.18576480939457
+    req: 3.8271780556529755
+  (CAY, CAY):
+    k0: 77.33855725757013
+    req: 3.829471953022269
+electrostatics:
+  CAD:
+    charge: 0.0
+  CAE:
+    charge: 0.0
+  CAG:
+    charge: 0.0
+  CAP:
+    charge: 0.0
+  CAT:
+    charge: 0.0
+  CAW:
+    charge: 0.0
+  CAY:
+    charge: 0.0
+lj:
+  CAD:
+    epsilon: 5253.36441182535
+    sigma: 1.0
+  CAE:
+    epsilon: 7032.479892179236
+    sigma: 1.0
+  CAG:
+    epsilon: 2815.3129586513187
+    sigma: 1.0
+  CAP:
+    epsilon: 3081.138189760285
+    sigma: 1.0
+  CAT:
+    epsilon: 4945.115090212634
+    sigma: 1.0
+  CAW:
+    epsilon: 2139.107609261696
+    sigma: 1.0
+  CAY:
+    epsilon: 2542.1297972051443
+    sigma: 1.0
+masses:
+  CAD: 12.0
+  CAE: 12.0
+  CAG: 12.0
+  CAP: 12.0
+  CAT: 12.0
+  CAW: 12.0
+  CAY: 12.0
