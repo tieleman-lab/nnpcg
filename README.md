@@ -24,6 +24,7 @@ To install **nnpcg** we recommend creating a new conda environment as follows:
 Then you can install **nnpcg** via pip:
 
 ``` bash
+   cd ..
    pip install -e .
 ```
 How to contribute?
