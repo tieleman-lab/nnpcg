@@ -118,3 +118,6 @@ nnpcg/data/simulation/.chignolin_0.xtc
 nnpcg/data/simulation/.DS_Store
 nnpcg/data/training_data/.DS_Store
 nnpcg/data/simulation/*
+!nnpcg/data/simulation/chignolin.xtc
+nnpcg/data/analysis/*
+

@@ -114,4 +114,7 @@ class EasySimulator():
         print('python train.py --conf simulate.yaml --log-dir data/train_light')
 
 
-# def EasyAnalyzer():
+class EasyAnalyzer():
+    def __init__(self, topology='structure.prmtop', coordinates='input.coor', box_dimensions='input.xsc', precision=torch.float, device='cpu'):
+        self.topology = topology
+        self.mol = Molecule(self.topology)

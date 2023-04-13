@@ -14,7 +14,7 @@ replicas: 32
 rfa: false
 save_period: 1000
 seed: 1
-steps: 5000000
+steps: 10000  #5000000
 topology: data/training_data/chignolin_ca_top.psf
 coordinates: data/simulation/chignolin.xtc
 temperature: 350

@@ -1,11 +1,11 @@
 atomtypes:
-- CAY
+- CAP
 - CAG
+- CAE
 - CAW
 - CAD
 - CAT
-- CAE
-- CAP
+- CAY
 bonds:
   (CAD, CAP):
     k0: 81.12476517572172
