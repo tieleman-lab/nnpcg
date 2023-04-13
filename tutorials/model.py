@@ -18,10 +18,9 @@ import warnings
 import random
 from moleculekit.molecule import Molecule
 from moleculekit.vmdviewer import getCurrentViewer
-from htmd.units import convert as unitconvert
+from units import convert as unitconvert
 import logging
 logger = logging.getLogger(__name__)
-
 
 class Model(object):
     """ Constructor for the Model class.
@@ -272,7 +271,7 @@ class Model(object):
         if nits is None:
             nits = np.min((self.data.K, 20))
 
-        from htmd.config import _config
+        # from htmd.config import _config
         its = msm.its(self.data.St.tolist(), lags=lags, errors=errors, nits=nits, n_jobs=njobs) # Use all CPUs minus one
         if plot or (save is not None):
             from matplotlib import pylab as plt
