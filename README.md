@@ -2,10 +2,10 @@ NnpCG
 ==============================
 [//]: # (Badges)
 [![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/)
-[![GitHub Actions Build Status](https://github.com/ProLint/prolint2/workflows/CI/badge.svg)](https://github.com/ProLint/prolint2/actions?query=workflow%3ACI)
+[![GitHub Actions Build Status](https://github.com/ProLint/prolint2/workflows/CI/badge.svg)](https://github.com/tieleman-lab/nnpcg/actions?query=workflow%3ACI)
 
 
-Python interface to set up simulations with state-of-the-art neural network potentials.
+Python interface to set up coarse-grained simulations with state-of-the-art neural network potentials.
 
 Installation
 ============
@@ -28,7 +28,7 @@ Then you can install **nnpcg** via pip:
 ```
 How to contribute?
 ==================
-If you find a bug in the source code, you can help us by submitting an issue to our [GitHub repo](https://github.com/ProLint/prolint2/tree/demo). Even better, you can submit a Pull Request with a fix. 
+If you find a bug in the source code, you can help us by submitting an issue to our [GitHub repo](https://github.com/tieleman-lab/nnpcg). Even better, you can submit a Pull Request with a fix. 
 
 We really appreciate your feedback!
 
