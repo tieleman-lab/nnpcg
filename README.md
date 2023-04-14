@@ -30,6 +30,17 @@ Then you can install **nnpcg** via pip in both environments:
    conda activate nnpcg_ana
    pip install -e .
 ```
+
+Curated Lipids DB
+=================
+| NMRLipids Score | NMRLpids Benchmark | Trajectory |
+| :-------------: | :----------------: | :--------: |
+| 0.83 | [link](http://databank.nmrlipids.fi/trayectorias/1) | [link](https://zenodo.org/record/6582985#.ZDnYauzMI-Q) |
+| 0.76 | [link](http://databank.nmrlipids.fi/trayectorias/617) | [link](https://zenodo.org/record/166034#.ZDnZ6ezMI-Q) |
+| 0.73 | [link](http://databank.nmrlipids.fi/trayectorias/696) | [link](https://zenodo.org/record/7022749#.ZDnaO-zMI-Q) |
+| 0.69 | [link](http://databank.nmrlipids.fi/trayectorias/457) | [link](https://zenodo.org/record/3741793#.ZDnb2OzMI-Q) |
+| 0.61 | [link](http://databank.nmrlipids.fi/trayectorias/63) | [link](https://zenodo.org/record/13498#.ZDndQuzMI-Q) |
+
 How to contribute?
 ==================
 If you find a bug in the source code, you can help us by submitting an issue to our [GitHub repo](https://github.com/tieleman-lab/nnpcg). Even better, you can submit a Pull Request with a fix. 
