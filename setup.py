@@ -49,7 +49,7 @@ setup(
     setup_requires=[] + pytest_runner,
 
     # Additional entries you may want simply uncomment the lines you want and fill in the data
-    python_requires=">=3.9",  # Python version restrictions
+    python_requires=">=3.8",  # Python version restrictions
 
     # Manual control if final package is compressible or not, set False to prevent the .egg from being made
     # zip_safe=False,

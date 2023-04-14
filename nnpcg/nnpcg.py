@@ -349,9 +349,30 @@ class EasySimulator():
 
 
 class EasyAnalyzer():
-    def __init__(self, refmol='coordinates.pdb', reftic='tic.dat', refmodel='input.xsc'):
-        refmol = Molecule('/home/dpastor/Dropbox (Biocomputing)/GitHub/projects/nnpcg/nnpcg/data/analysis/proteing_1mi0.pdb')
-        reftic = TICApyemma(20).load('/home/dpastor/Dropbox (Biocomputing)/GitHub/projects/nnpcg/nnpcg/data/analysis/proteing_TICA_lag20_CAdist_skip1.dat')
+    def __init__(self, refmol='coordinates.pdb', reftic='tic.dat', refmodel='model.dat'):
+        self.refmol = Molecule(refmodel)
+        self.reftic = TICApyemma(20).load(reftic)
 
-        refmodel = Model(file='/home/dpastor/Dropbox (Biocomputing)/GitHub/projects/nnpcg/nnpcg/data/analysis/proteing_model_lag10ns_1200k_4ticadim_CAdist_skip1.dat')
-        mweights = computeWeights(refmodel)
+        self.refmodel = Model(file=refmodel)
+        self.mweights = computeWeights(refmodel)
+
+    def plot_ref_tic(self):
+        levels = np.arange(0, 7.6, 1.5)
+        cmap = 'viridis'
+        dimx, dimy = 0,1
+        refstates = list(range(self.refmol.macronum))[::-1]
+
+        plt.figure(figsize=[10, 10])
+        plotContour(np.concatenate(self.refmol.data.dat), self.mweights, levels, dimx=dimx, dimy=dimy, cmap=cmap)
+        cbar = plt.colorbar()
+        cbar.ax.tick_params() 
+        cbar.ax.get_yaxis().labelpad = 20
+        cbar.ax.set_ylabel('kcal/mol', rotation=270)
+        # plotstates(refmodel, states=refstates, dimx=dimx, dimy=dimy, cmap='tab20')
+        # plt.legend(fontsize=10, bbox_to_anchor=(1.25, 1), loc='upper left')
+        plt.xlabel(f'TICA dim {dimx}', size=16)
+        plt.ylabel(f'TICA dim {dimy}', size=16)
+        plt.title('Reference MD simulations - {:.1f}µs'.format(np.concatenate(self.refmodel.data.dat).shape[0] * 0.1))
+        plt.show()
+
+    
