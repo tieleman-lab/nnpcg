@@ -14,17 +14,20 @@ To install **nnpcg** we recommend creating a new conda environment as follows:
 ``` bash
    git clone https://github.com/tieleman-lab/nnpcg
    cd nnpcg
-   conda env create -f nnpcg_environment.yml
+   conda env create -f nnpcg_train_run.yml
+   conda env create -f nnpcg_analysis.yml
    conda activate nnpcg_dev
    git clone https://github.com/torchmd/torchmd-net.git
    cd torchmd-net
    pip install -e .
 ```
 
-Then you can install **nnpcg** via pip:
+Then you can install **nnpcg** via pip in both environments:
 
 ``` bash
    cd ..
+   pip install -e .
+   conda activate nnpcg_ana
    pip install -e .
 ```
 How to contribute?

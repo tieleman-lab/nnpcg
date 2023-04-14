@@ -2,7 +2,6 @@
 # author: Daniel P.Ramirez
 import yaml
 import numpy as np
-from htmd.ui import *
 from moleculekit.molecule import Molecule
 from torchmd_cg.utils.psfwriter import pdb2psf_CA
 from torchmd_cg.utils.prior_fit import get_param_bonded
@@ -82,5 +81,5 @@ class EasyTrainer:
             "Please run the following command in a terminal with the proper python env:"
         )
         print(
-            "python nnpcg/train.py --conf nnpcg/train.yaml --log-dir nnpcg/data/train_light"
+            "python train.py --conf train.yaml --log-dir data/train_light"
         )
