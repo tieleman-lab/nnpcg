@@ -9,7 +9,7 @@ Python interface to set up coarse-grained simulations with state-of-the-art neur
 
 Installation
 ============
-To install **nnpcg** we recommend creating a new conda environment as follows:
+To install **nnpcg** we recommend creating two different conda environments as follows:
 
 ``` bash
    git clone https://github.com/tieleman-lab/nnpcg
