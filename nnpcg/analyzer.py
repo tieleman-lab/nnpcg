@@ -1,6 +1,8 @@
 # analyzer module in the nnpcg package
 # author: Daniel P.Ramirez
+import matplotlib
 import numpy as np
+import seaborn as sns
 from htmd.ui import *
 import matplotlib.pyplot as plt
 from moleculekit.molecule import Molecule
