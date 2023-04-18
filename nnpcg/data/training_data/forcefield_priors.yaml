@@ -1,10 +1,10 @@
 atomtypes:
-- CAP
-- CAY
 - CAD
-- CAW
-- CAE
 - CAG
+- CAP
+- CAE
+- CAW
+- CAY
 - CAT
 bonds:
   (CAD, CAP):
