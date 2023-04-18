@@ -3,7 +3,6 @@
 import torch
 import numpy as np
 from tqdm import tqdm
-from htmd.ui import *
 from moleculekit.molecule import Molecule
 from torchmd.forcefields.forcefield import ForceField
 from torchmd.parameters import Parameters
@@ -135,9 +134,9 @@ class EasySimulator:
                 }
             )
 
-    # Print a command for the user to run in a terminal with the proper python environment
-    def run_from_config(self):
-        print(
-            "Please run the following command in a terminal with the proper python env:"
-        )
-        print("python train.py --conf simulate.yaml --log-dir data/train_light")
+# Print a command for the user to run in a terminal with the proper python environment
+def run_from_config():
+    print(
+        "Please run the following command in a terminal with the proper python env:"
+    )
+    print("python train.py --conf simulate.yaml --log-dir data/train_light")
