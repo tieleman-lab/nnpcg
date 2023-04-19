@@ -284,6 +284,10 @@ class EasyAnalyzer:
 
         self.refmodel = Model(file=refmodel)
         self.mweights = computeWeights(refmodel)
+        self.sims = None
+        self.datatica = None
+        self.cgmodel = None
+        self.cgweights = None
 
     def plot_ref_tic(self):
         levels = np.arange(0, 7.6, 1.5)
@@ -314,3 +318,34 @@ class EasyAnalyzer:
             )
         )
         plt.show()
+    
+    def load_cg_data(self, sims):
+        self.sims = sims
+
+    def dimensionality_reduction(self):
+        # creating Metric object
+        skip = 2
+        metr = Metric(self.sims, skip=skip)
+        metr.set(MetricSelfDistance('all', periodic=None))
+        data = metr.project()
+        data.fstep = 0.0001 * skip
+
+        # creating TICA object
+        ticadim = 3
+        init_frames = 0.1
+        self.reftic.set_params(dim=ticadim)
+        self.datatica = self.reftic.transform(np.concatenate([line[int(line.shape[0] * init_frames):] for line in data.dat]))
+        self.datatica = MetricData(dat=self.datatica.reshape(len(data.simlist), -1, ticadim), simlist=data.simlist, fstep=data.fstep)
+
+    def data_clustering(self):
+        nclust = 200
+        self.datatica.cluster(MiniBatchKMeans(nclust))
+    
+    def cg_markov_model(self):
+        macronum = 4
+        lag = 0.01
+        self.cgmodel = Model(self.datatica)
+        self.cgmodel.markovModel(lag, macronum, units='ns')
+        self.cgweights = computeWeights(self.cgmodel)
+
+
