@@ -120,4 +120,5 @@ nnpcg/data/training_data/.DS_Store
 nnpcg/data/simulation/*
 !nnpcg/data/simulation/chignolin.xtc
 nnpcg/data/analysis/*
+.devcontainer/*
 
